@@ -21,9 +21,9 @@ int check_cycle(listint_t *list)
     {
         if (slow->next == NULL)
             return(0);
+        slow = slow->next;
         if (fast->next->next == NULL)
             return(0);
-        slow = slow->next;
         fast = fast->next->next;
         if (fast == slow)
             break;
