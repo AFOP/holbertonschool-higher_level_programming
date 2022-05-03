@@ -10,12 +10,15 @@
  */
 int check_cycle(listint_t *list)
 {
+    listint_t *current;
+
+    current = list;
     while (list != NULL)
     {
-        list = list->next;
         if (list->next == NULL)
             return(0);
-        if (list->next != NULL)
+        list = list->next;
+        if (current == list)
             break;
     }
     return(1);
