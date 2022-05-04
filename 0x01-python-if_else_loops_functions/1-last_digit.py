@@ -5,6 +5,8 @@ if number > 0:
     lastdigit = number % 10
 elif number < 0:
     lastdigit = number % -10
+else:
+    lastdigit = 0
 
 if lastdigit > 5:
     result = "and is greater than 5"
