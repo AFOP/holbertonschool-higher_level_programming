@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  * check_cycle - check if is a cicle
  * @list: pointer of the singly linked
@@ -15,11 +14,11 @@ int check_cycle(listint_t *list)
 
     if (list == NULL)
         return(0);
+
     slow = list;
-    fast = slow->next;
-    if (fast == NULL)
-        return(0);
-    while (slow->next != NULL && fast->next != NULL)
+    fast = list;
+
+    while (slow->next != NULL && fast->next != NULL && fast->next->next != NULL)
     {
         slow = slow->next;
         fast = fast->next->next;
