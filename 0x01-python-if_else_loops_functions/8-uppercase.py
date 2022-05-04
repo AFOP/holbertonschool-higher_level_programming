@@ -6,4 +6,5 @@ def uppercase(str):
         else:
             resta = 0
         print('{:c}'.format(ord(c) - resta), end="")
-    print() 
+    print()
+ 
