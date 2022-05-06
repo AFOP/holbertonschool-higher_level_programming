@@ -9,5 +9,5 @@ if __name__ == "__main__":
             print(":")
         else:
             print("s:")
-        for i in range(1,len(argv)):
+        for i in range(1, len(argv)):
             print("{:d}:".format(i), argv[i])
