@@ -6,4 +6,8 @@
 
 
 class Square():
+    """
+    Comments:
+        coments for pycode
+    """
     pass
