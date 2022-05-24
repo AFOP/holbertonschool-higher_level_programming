@@ -4,4 +4,4 @@ class Square():
     Args:
         Nothing parametres
     """
-    pass  # An empty block
+    pass
