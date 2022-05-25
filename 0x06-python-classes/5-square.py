@@ -38,9 +38,9 @@ class Square():
     def my_print(self):
         """area: calculate area of size"""
         if self.__size == 0:
-            print()
+            return print()
         else:
-            for f in range(0, self.__size + 1):
+            for f in range(0, self.__size):
                 for c in range(0, self.__size):
                     print("#", end="")
                 print()
