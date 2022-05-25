@@ -41,6 +41,6 @@ class Square():
             print()
         else:
             for f in range(0, self.__size + 1):
-                for c in range(0, self.__size + 1):
+                for c in range(0, self.__size):
                     print("#", end="")
                 print()
