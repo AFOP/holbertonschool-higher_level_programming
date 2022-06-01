@@ -47,3 +47,6 @@ class Rectangle:
     def perimeter(self):
         """return perimeter"""
         return (self.width + self.width + self.height + self.height)
+
+        else:
+            return (0)
