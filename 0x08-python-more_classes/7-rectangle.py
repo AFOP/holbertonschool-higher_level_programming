@@ -21,7 +21,7 @@ class Rectangle:
         text = []
         for x in range(self.height):
             for y in range(self.width):
-                text.append(str(Rectangle.print_symbol))
+                text.append(str(self.print_symbol))
             text.append("\n")
         text.pop()
         return "".join(text)
