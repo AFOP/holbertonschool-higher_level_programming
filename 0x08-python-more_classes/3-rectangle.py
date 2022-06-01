@@ -26,8 +26,9 @@ class Rectangle:
             self.__width = value
 
     def __str__(self):
-        if self.height == 0 and self.width == 0:
-            return (None)
+        """return text with #"""
+        if self.height <= 0 or self.width <= 0:
+            return ("")
         text = []
         for x in range(self.height):
             for y in range(self.width):
