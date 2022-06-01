@@ -26,6 +26,23 @@ class Rectangle:
         text.pop()
         return "".join(text)
 
+    def bigger_or_equal(rect_1, rect_2):
+        """Compares two rectangle areas
+        """
+
+        if type(rect_1) is not Rectangle
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        area_1 = rect_1.width * rect_1.height
+        area_2 = rect_2.width * rect_2.height
+        if area_1 == area_2:
+            return area_1
+        elif area_1 > area_2:
+            return area_1
+        else:
+            return area_2
+
     @property
     def width(self):
         """return width"""
