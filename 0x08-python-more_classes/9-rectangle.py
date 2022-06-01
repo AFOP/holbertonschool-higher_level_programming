@@ -76,7 +76,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """evalue the height now value"""
-        return cls(size, size) 
+        return cls(size, size)
 
     def area(self):
         """return area"""
