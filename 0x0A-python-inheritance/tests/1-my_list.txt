@@ -11,7 +11,7 @@ This is an example text file in reStructuredText format.  First import
 
 Now use it:
 
-    >>> my_list = MyList()
+    >>> bg = BaseGeometry()
     >>> my_list.append(1)
     >>> my_list.append(4)
     >>> my_list.append(2)

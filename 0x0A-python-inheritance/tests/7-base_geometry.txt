@@ -1,0 +1,21 @@
+Using ``integer_validator``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+        ...
+    TypeError: name must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("distance", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: distance must be greater than 0
