@@ -7,3 +7,6 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """method init with width and height"""
+
+        self.width = width
+        self.height = height
