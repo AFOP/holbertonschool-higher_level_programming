@@ -38,4 +38,4 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """method magic str"""
 
-        return ("[{}] {}/{}".format(Rectangle.__name__, self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
