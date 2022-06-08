@@ -18,10 +18,13 @@ class BaseGeometry:
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
+
     """class Rectangle inhered of BaseGeometry"""
 
     def __init__(self, width, height):
+
         """ method constructor """
 
         self.integer_validator("width", width)
