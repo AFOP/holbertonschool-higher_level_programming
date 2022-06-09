@@ -16,6 +16,6 @@ if validator is False:
     save_to_json_file(lista, filename)
 else:
     x = load_from_json_file(filename)
-    for i in x:
-        lista.append(i)
-    save_to_json_file(lista, filename)
+    for i in lista:
+        x.append(i)
+    save_to_json_file(x, filename)
