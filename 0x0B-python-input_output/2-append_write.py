@@ -7,7 +7,7 @@ of characters added"""
 def append_write(filename="", text=""):
     """method append_file"""
 
-    with open(filename, 'r+', encoding="utf-8") as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         s = f.write(text)
     f.close()
     return s
