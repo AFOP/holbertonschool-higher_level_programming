@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 Rectangle = __import__('8-rectangle').Rectangle
 
-r = Rectangle()
+r = Rectangle(3, 5)
 
-print(r.width)
+print(r)
 print(dir(r))
 
 try:
