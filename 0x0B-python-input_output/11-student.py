@@ -23,4 +23,7 @@ class Student:
         return new_dic
 
     def reload_from_json(self, json):
-        
+        """Replaces the attributes in the instance"""
+        for key_json, value_json in json.items():
+            setattr(self, key_json, value_json)
+        return json
