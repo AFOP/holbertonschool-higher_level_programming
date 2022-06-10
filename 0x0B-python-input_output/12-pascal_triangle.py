@@ -6,9 +6,11 @@ representing the Pascal triangle of n """
 def pascal_triangle(n):
     """method pascal_triangle"""
 
-    lista = []
-
     if n <= 0:
+        lista = []
+        return lista
+    if n == 1:
+        lista = [[1]]
         return lista
     lista = [[1], [1, 1]]
 
