@@ -87,11 +87,17 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """prints in stdout the Rectangle"""
-        if self.height <= 0 or self.width <= 0:
+        """print a Rectangle taking care of x and y"""
+        if self.y > 0:
+            for jump in range(self.y):
+                print()
+        if self.height > 0 and self.width > 0:
+            for x in range(self.height):
+                if self.x > 0:
+                    for spaces in range(self.x):
+                        print(" ", end="")
+                for y in range(self.width):
+                    print("#", end="")
+                print()
+        else: 
             return ("")
-        text = []
-        for x in range(self.height):
-            for y in range(self.width):
-                print("#", end="")
-            print()
