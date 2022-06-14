@@ -16,6 +16,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """Update the class Rectangle by overriding the 
+        __str__ method so that it returns [Rectangle] 
+        (<id>) <x>/<y> - <width>/<height>"""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+
     @property
     def width(self):
         """return width"""
@@ -51,7 +57,7 @@ class Rectangle(Base):
         """return private x"""
         return self.__x
 
-    @width.setter
+    @x.setter
     def x(self, value):
         """evalue the x now value"""
         if type(value) is not int:
@@ -66,7 +72,7 @@ class Rectangle(Base):
         """return private y"""
         return self.__y
 
-    @width.setter
+    @y.setter
     def y(self, value):
         """evalue the y now value"""
         if type(value) is not int:
@@ -80,4 +86,12 @@ class Rectangle(Base):
         """return area"""
         return self.width * self.height
 
-
+    def display(self):
+        """prints in stdout the Rectangle"""
+        if self.height <= 0 or self.width <= 0:
+            return ("")
+        text = []
+        for x in range(self.height):
+            for y in range(self.width):
+                print("#", end="")
+            print()
