@@ -23,7 +23,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """method to_json_string"""
         if list_dictionaries is None:
-            return []
+            return json.dumps([])
         return json.dumps(list_dictionaries)
 
     @classmethod
