@@ -3,6 +3,7 @@
 - with this file, the folder will become a Python package"""
 
 import json
+import os.path
 
 class Base:
     """Class Base"""
@@ -52,3 +53,17 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return (dummy)
+
+    @classmethod
+    def load_from_file(cls):
+        """class method load_from_file"""
+        lista = []
+        filename = cls.__name__ + ".json"
+        if os.path.isfile(filename): 
+            with open(filename, 'r', encoding="utf-8") as file_json:
+                file_str = cls.from_json_string(file_json.read())
+                for x in file_str:
+                    lista.append(cls.create(**x))
+            return lista
+        else:
+            return []
