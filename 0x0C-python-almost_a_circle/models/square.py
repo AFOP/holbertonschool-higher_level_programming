@@ -33,7 +33,8 @@ class Square(Rectangle):
         """method should return [Square] (<id>)
         <x>/<y> - <size> - in our case,
         width or height"""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
+        return ("[Square] ({}) {}/{} - {}".format(self.id,
+                self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """*args is the list of arguments - no-keyworded arguments

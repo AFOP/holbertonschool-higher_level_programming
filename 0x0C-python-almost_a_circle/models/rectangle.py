@@ -21,7 +21,8 @@ class Rectangle(Base):
         """Update the class Rectangle by overriding the
         __str__ method so that it returns [Rectangle]
         (<id>) <x>/<y> - <width>/<height>"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                self.x, self.y, self.width, self.height))
 
     @property
     def width(self):
@@ -138,4 +139,4 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
         return {'id': self.id, 'widht': self.__width, 'height':
-        self.__height, 'x': self.__x, 'y': self.__y}
+                self.__height, 'x': self.__x, 'y': self.__y}
