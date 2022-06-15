@@ -24,7 +24,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """method save_to_file"""
+        """class method save_to_file"""
         lista = []
         if list_objs is not None:
             for x in list_objs:
@@ -35,9 +35,20 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """method from_json_string"""
+        """static method from_json_string"""
         lista = []
         if json_string is not None:
             return json.loads(json_string)
         else:
             return lista
+
+    @classmethod
+    def create(cls, **dictionary):
+        """class method from_json_string"""
+        nom_class = cls.__name__
+        if nom_class == 'Rectangle':
+            dummy = cls(1, 1)
+        if nom_class == 'Square':
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return (dummy)
