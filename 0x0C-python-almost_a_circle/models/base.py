@@ -67,3 +67,28 @@ class Base:
             return lista
         else:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save_to_file_csv"""
+        lista = []
+        if list_objs is not None:
+            for x in list_objs:
+                lista.append(cls.to_dictionary(x))
+        filename = cls.__name__ + ".cvs"
+        with open(filename, 'w', encoding="utf-8") as f:
+            f.write(cls.to_json_string(lista))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """class method load_from_file"""
+        lista = []
+        filename = cls.__name__ + ".csv"
+        if os.path.isfile(filename):
+            with open(filename, 'r', encoding="utf-8") as file_json:
+                file_str = cls.from_json_string(file_json.read())
+                for x in file_str:
+                    lista.append(cls.create(**x))
+            return lista
+        else:
+            return []
