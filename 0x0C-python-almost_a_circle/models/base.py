@@ -5,11 +5,11 @@
 import json
 import os.path
 
+
 class Base:
     """Class Base"""
-
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """method constructor"""
 
@@ -59,7 +59,7 @@ class Base:
         """class method load_from_file"""
         lista = []
         filename = cls.__name__ + ".json"
-        if os.path.isfile(filename): 
+        if os.path.isfile(filename):
             with open(filename, 'r', encoding="utf-8") as file_json:
                 file_str = cls.from_json_string(file_json.read())
                 for x in file_str:

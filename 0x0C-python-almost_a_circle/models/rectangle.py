@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Class Rectangle inherits from Base"""
 
@@ -17,8 +18,8 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        """Update the class Rectangle by overriding the 
-        __str__ method so that it returns [Rectangle] 
+        """Update the class Rectangle by overriding the
+        __str__ method so that it returns [Rectangle]
         (<id>) <x>/<y> - <width>/<height>"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
 
@@ -36,7 +37,7 @@ class Rectangle(Base):
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         """return height"""
@@ -98,8 +99,8 @@ class Rectangle(Base):
                         print(" ", end="")
                 for y in range(self.width):
                     print("#", end="")
-                print()
-        else: 
+            print()
+        else:
             return ("")
 
     def update(self, *args, **kwargs):
@@ -109,7 +110,7 @@ class Rectangle(Base):
         3rd argument should be the height attribute
         4th argument should be the x attribute
         5th argument should be the y attribute"""
-        if args and args is not None: 
+        if args and args is not None:
             for i in range(len(args)):
                 if i == 0:
                     self.id = args[0]
@@ -136,4 +137,4 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
-        return {'id': self.id, 'widht': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y }
+        return {'id': self.id, 'widht': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
