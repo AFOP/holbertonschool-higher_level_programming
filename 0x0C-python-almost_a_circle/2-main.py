@@ -1,27 +1,43 @@
 #!/usr/bin/python3
-""" 2-main """
+""" Check """
 from models.rectangle import Rectangle
 
-if __name__ == "__main__":
+r = Rectangle(10, 12)
 
-    try:
-        Rectangle(10, "2")
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+try:
+    r.width = -12
+    print("ValueError exception not raised")
+    exit(1)
+except ValueError as e:
+    if str(e) != "width must be > 0":
+        print("Wrong exception message: {}".format(e))
+        exit(1)
+except Exception as e:
+    print("Wrong exception: [{}] {}".format(type(e), e))
+    exit(1)
 
-    try:
-        r = Rectangle(10, 2)
-        r.width = -10
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+try:
+    r.width = -89
+    print("ValueError exception not raised")
+    exit(1)
+except ValueError as e:
+    if str(e) != "width must be > 0":
+        print("Wrong exception message: {}".format(e))
+        exit(1)
+except Exception as e:
+    print("Wrong exception: [{}] {}".format(type(e), e))
+    exit(1)
 
-    try:
-        r = Rectangle(10, 2)
-        r.x = {}
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+try:
+    r.width = 0
+    print("ValueError exception not raised")
+    exit(1)
+except ValueError as e:
+    if str(e) != "width must be > 0":
+        print("Wrong exception message: {}".format(e))
+        exit(1)
+except Exception as e:
+    print("Wrong exception: [{}] {}".format(type(e), e))
+    exit(1)
 
-    try:
-        Rectangle(10, 2, 3, -1)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+print("OK", end="")
