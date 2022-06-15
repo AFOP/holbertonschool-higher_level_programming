@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Class Square inherits from Rectangle"""
 
@@ -29,8 +30,8 @@ class Square(Rectangle):
             self.heigth = value
 
     def __str__(self):
-        """method should return [Square] (<id>) 
-        <x>/<y> - <size> - in our case, 
+        """method should return [Square] (<id>)
+        <x>/<y> - <size> - in our case,
         width or height"""
         return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
 
@@ -40,7 +41,7 @@ class Square(Rectangle):
         2nd argument should be the size attribute
         3rd argument should be the x attribute
         4th argument should be the y attribute"""
-        if args and args is not None: 
+        if args and args is not None:
             for i in range(len(args)):
                 if i == 0:
                     self.id = args[0]
@@ -49,7 +50,7 @@ class Square(Rectangle):
                 if i == 2:
                     self.x = args[2]
                 if i == 3:
-                    self.y = args[3]                    
+                    self.y = args[3]
         elif kwargs is not None:
             for key, value in kwargs.items():
                 if key == "id":
@@ -63,4 +64,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
-        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y }
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
