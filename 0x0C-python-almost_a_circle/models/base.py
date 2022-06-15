@@ -36,5 +36,8 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """method from_json_string"""
+        lista = []
         if json_string is not None:
             return json.loads(json_string)
+        else:
+            return lista
