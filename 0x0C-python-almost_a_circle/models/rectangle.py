@@ -94,13 +94,13 @@ class Rectangle(Base):
             for jump in range(self.y):
                 print()
         if self.height > 0 and self.width > 0:
-            for x in range(self.height):
+            for h in range(self.height):
                 if self.x > 0:
                     for spaces in range(self.x):
                         print(" ", end="")
-                for y in range(self.width):
+                for w in range(self.width):
                     print("#", end="")
-            print()
+                print()
         else:
             return ("")
 
@@ -138,5 +138,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
-        return {'id': self.id, 'widht': self.__width, 'height':
+        return {'id': self.id, 'width': self.__width, 'height':
                 self.__height, 'x': self.__x, 'y': self.__y}
