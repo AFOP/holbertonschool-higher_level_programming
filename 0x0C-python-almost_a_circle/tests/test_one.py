@@ -30,5 +30,23 @@ class  General(unittest.TestCase):
             Rectangle(2, -10)
         self.assertEqual(str(exc.exception), "height must be > 0")
 
+    def  test_to_json_string(self):
+        "method test_width_heigth"
+
+        r1 = Base.to_json_string(None)
+        self.assertEqual(r1, '[]')
+
+    def  test_to_json_string(self):
+        "method test_width_heigth"
+
+        r1 = Base.to_json_string(None)
+        self.assertEqual(r1, '[]')
+
+        r2 = Base.to_json_string([])
+        self.assertEqual(r2, '[]')
+
+        r3 = Base.to_json_string([ { 'id': 12 }])
+        self.assertEqual(r3, '[{"id": 12}]')
+
 if __name__ == '__main__':
         unittest.main()
