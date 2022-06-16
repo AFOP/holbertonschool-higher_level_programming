@@ -2,13 +2,15 @@
 """ Check """
 import unittest
 from models.rectangle import Rectangle
+from models.square import Square
 from models.base import Base
 
 
-class  TestStringMethods (unittest . TestCase):
+class  General(unittest.TestCase):
     "Test Class General"
 
     if __name__ == '__main__':
+        unittest.main()
 
         def  test_id(self):
             "method test_id"
@@ -38,7 +40,7 @@ class  TestStringMethods (unittest . TestCase):
             self.assertEqual(b1.id, 12)
 
         def  test_width_heigth(self):
-            "method width_heigth"
+            "method test_width_heigth"
 
             with self.assertRaises(TypeError):
                 Rectangle(10, "2")
