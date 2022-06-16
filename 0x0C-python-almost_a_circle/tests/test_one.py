@@ -29,6 +29,25 @@ class  General(unittest.TestCase):
         with self.assertRaises(ValueError) as exc:
             Rectangle(2, -10)
         self.assertEqual(str(exc.exception), "height must be > 0")
+    
+    def  test_x_y(self):
+        "method test_x_y"
+
+        with self.assertRaises(TypeError) as exc:
+            Rectangle(1, 2, 3, "4")
+        self.assertEqual(str(exc.exception), "y must be an integer")
+                
+        with self.assertRaises(TypeError) as exc:
+            Rectangle(1, 2, "3", 4)
+        self.assertEqual(str(exc.exception), "x must be an integer")
+
+        with self.assertRaises(ValueError) as exc:
+            Rectangle(1, 2, 3, -4)
+        self.assertEqual(str(exc.exception), "y must be >= 0")
+
+        with self.assertRaises(ValueError) as exc:
+            Rectangle(1, 2, -3, 4)
+        self.assertEqual(str(exc.exception), "x must be >= 0")
 
     def  test_to_json_string(self):
         "method test_width_heigth"
