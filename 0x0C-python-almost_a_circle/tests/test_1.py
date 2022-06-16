@@ -8,8 +8,45 @@ from models.base import Base
 class  TestStringMethods (unittest . TestCase):
     "Test Class General"
 
-    def  test_width_heigth(self):
-        "method test_width_heigth"
+    def  test_id(self):
+        "method test_id"
 
-        with self.assertRaises(TypeError):
-            Rectangle.width("w")
+        if __name__ == "__main__":
+
+            b1 = Base()
+            self.assertEqual(b1.id, 1)
+
+            b2 = Base()
+            self.assertEqual(b1.id, 2)
+
+            b3 = Base()
+            self.assertEqual(b1.id, 3)
+
+            b4 = Base(12)
+            self.assertEqual(b1.id, 12)
+
+            b5 = Base()
+            self.assertEqual(b1.id, 4)
+
+            r1 = Rectangle(10, 2)
+            self.assertEqual(b1.id, 1)
+
+            r2 = Rectangle(2, 10)
+            self.assertEqual(b1.id, 2)
+
+            r3 = Rectangle(10, 2, 0, 0, 12)
+            self.assertEqual(b1.id, 12)
+
+    def  test_width_heigth(self):
+        "method width_heigth"
+
+        if __name__ == "__main__":
+
+            with self.assertRaises(TypeError):
+                Rectangle(10, "2")
+            
+            with self.assertRaises(ValueError):
+                Rectangle(-10, 2)
+
+            with self.assertRaises(ValueError):
+                Rectangle(2, -10)
