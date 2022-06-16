@@ -13,7 +13,7 @@ class  General(unittest.TestCase):
         "method test_id"
 
         b1 = Base()
-        self.assertEqual(b1.id, 1)
+        self.assertEqual(b1.id, 2)
 
     def  test_width_heigth(self):
         "method test_width_heigth"
@@ -49,11 +49,27 @@ class  General(unittest.TestCase):
             Rectangle(1, 2, -3, 4)
         self.assertEqual(str(exc.exception), "x must be >= 0")
 
+        with self.assertRaises(ValueError) as exc:
+            Rectangle(1, 2, -3)
+        self.assertEqual(str(exc.exception), "x must be >= 0")
+
     def  test_to_json_string(self):
-        "method test_width_heigth"
+        "method test_to_json_string"
 
         r1 = Base.to_json_string(None)
         self.assertEqual(r1, '[]')
+
+    def  test_area(self):
+        "method test_area"
+
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area(), 6)
+
+    def  test_str_magic(self):
+        "method test_str_magic"
+
+        r1 = Rectangle(5, 5, 1)
+        self.assertEqual(str(r1), "[Rectangle] (3) 1/0 - 5/5")
 
     def  test_to_json_string(self):
         "method test_width_heigth"
