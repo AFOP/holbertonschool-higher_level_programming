@@ -8,10 +8,10 @@ from models.base import Base
 class  TestStringMethods (unittest . TestCase):
     "Test Class General"
 
-    def  test_id(self):
-        "method test_id"
+    if __name__ == '__main__':
 
-        if __name__ == "__main__":
+        def  test_id(self):
+            "method test_id"
 
             b1 = Base()
             self.assertEqual(b1.id, 1)
@@ -37,14 +37,12 @@ class  TestStringMethods (unittest . TestCase):
             r3 = Rectangle(10, 2, 0, 0, 12)
             self.assertEqual(b1.id, 12)
 
-    def  test_width_heigth(self):
-        "method width_heigth"
-
-        if __name__ == "__main__":
+        def  test_width_heigth(self):
+            "method width_heigth"
 
             with self.assertRaises(TypeError):
                 Rectangle(10, "2")
-            
+                
             with self.assertRaises(ValueError):
                 Rectangle(-10, 2)
 
