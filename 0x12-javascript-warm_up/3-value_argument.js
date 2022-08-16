@@ -9,7 +9,7 @@ You are not allowed to use length
 const args = process.argv;
 let i = 0;
 while (args[i]) {
-  if (i > 1) {
+  if (i === 1) {
     console.log(args[i]);
   }
   i++;
