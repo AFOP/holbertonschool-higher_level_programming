@@ -9,16 +9,15 @@ You can use only two console.log
 You must use a loop (while, for, etc.)
 */
 const args = process.argv;
-let x = parseInt(args[2]);
-let hight = parseInt(args.leght);
+const x = parseInt(args[2]);
 let i = 0;
 if (args[2]) {
-    if (x > 0) {
-        while (i < x) {
-            console.log('C is fun');
-            i++;
-        }
+  if (x > 0) {
+    while (i < x) {
+      console.log('C is fun');
+      i++;
     }
+  }
 } else {
-    console.log('Missing number of occurrences');
+  console.log('Missing number of occurrences');
 }
