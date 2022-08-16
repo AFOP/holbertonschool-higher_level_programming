@@ -7,13 +7,8 @@ You are not allowed to use var
 You are not allowed to use length
 */
 const args = process.argv;
-let i = 0;
-while (args[i]) {
-  if (i === 1) {
-    console.log(args[i]);
-  }
-  i++;
-}
-if (i === 2) {
+if (args[2]) {
+  console.log(args[2]);
+} else {
   console.log('No argument');
 }
