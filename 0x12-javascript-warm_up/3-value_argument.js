@@ -8,13 +8,12 @@ You are not allowed to use length
 */
 const args = process.argv;
 let i = 0;
-while (args[i])
-{ 
+while (args[i]) {
   if (i > 1) {
     console.log(args[i]);
   }
   i++;
 }
-if (i <= 2) {
+if (i === 2) {
   console.log('No argument');
 }
