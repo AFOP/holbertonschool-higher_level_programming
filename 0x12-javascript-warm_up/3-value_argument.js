@@ -15,6 +15,6 @@ while (args[i])
   }
   i++;
 }
-if (i === 2) {
+if (i <= 2) {
   console.log('No argument');
 }
