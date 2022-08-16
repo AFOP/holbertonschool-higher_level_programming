@@ -13,4 +13,4 @@ if (parseInt(args[2])) {
   console.log('My number: ' + n);
 } else {
   console.log('Not a number');
-  }
+}
