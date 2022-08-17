@@ -2,13 +2,14 @@
 /*
 Function factorialize for recurtion
 */
-function factorialize(num) {
-  if (num < 0)
-    return -1;
-  else if (num == 0) 
-    return 1;
-  else
+function factorialize (num) {
+  if (num < 0) {
+    return (-1);
+  } else if (num === 0) {
+    return (1);
+  } else {
     return (num * factorialize(num - 1));
+  }
 }
 /*
 Write a script that computes and prints a factorial
