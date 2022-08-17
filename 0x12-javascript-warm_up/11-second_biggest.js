@@ -18,7 +18,7 @@ if (args && args.length > 3) {
     i++;
     j++;
   }
-  sort = sort.sort();
+  sort = sort.sort((a, b) => a - b);
   console.log(sort[size - 1]);
 } else {
   console.log(0);
