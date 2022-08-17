@@ -17,8 +17,8 @@ class Rectangle {
       return (undefined);
     }
   }
-  
-  print() {
+
+  print () {
     let i = 1;
     let j = 1;
     let resultado = '';
