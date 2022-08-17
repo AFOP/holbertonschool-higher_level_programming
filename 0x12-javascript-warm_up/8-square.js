@@ -13,7 +13,7 @@ const size = parseInt(args[2]);
 let i = 1;
 let j = 1;
 let resultado = '';
-if ((typeof (args[2]) === 'number') && args[2]) {
+if (args[2] && parseInt(args[2])) {
   if (size > 0) {
     while (i <= size) {
       while (j <= size) {
