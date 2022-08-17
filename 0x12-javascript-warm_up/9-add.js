@@ -9,6 +9,8 @@ You are not allowed to use var
 */
 const args = process.argv;
 let r = 0;
+let n1 = 0;
+let n2 = 0;
 if (args.length < 2) {
   console.log('NaN');
 } else {
