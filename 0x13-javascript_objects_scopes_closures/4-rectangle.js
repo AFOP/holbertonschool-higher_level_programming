@@ -24,6 +24,9 @@ class Rectangle {
     let i = 1;
     let j = 1;
     let resultado = '';
+    if (!c) {
+      c = "X";
+    }
     while (i <= this.height) {
       while (j <= this.width) {
         resultado += c;
