@@ -10,7 +10,6 @@ Create an instance method called print() that prints the rectangle using the cha
 Create an instance method called rotate() that exchanges the width and the height of the rectangle
 Create an instance method called double() that multiples the width and the height of the rectangle by 2
 */
-const Square = require('./6-square');
 class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
@@ -28,7 +27,7 @@ class Rectangle {
     if (c === 'C') {
       c = 'C';
     } else {
-      c = 'X'
+      c = 'X';
     }
     while (i <= this.height) {
       while (j <= this.width) {
