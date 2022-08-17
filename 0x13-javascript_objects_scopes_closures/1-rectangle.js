@@ -7,10 +7,9 @@ Initialize the instance attribute width with the value of w
 Initialize the instance attribute height with the value of h
 */
 class Rectangle {
-
-    constructor(width, height) {
-        this.width = width;
-        this.height = height;
-    }
+  constructor (width, height) {
+    this.width = width;
+    this.height = height;
+  }
 }
 module.exports = Rectangle;
