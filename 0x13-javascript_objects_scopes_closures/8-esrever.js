@@ -5,5 +5,13 @@ Prototype: exports.esrever = function (list)
 You are not allow to use the built-in method reverse
 */
 exports.esrever = function (list) {
-  return (list.reverse());
+  const reverse = [];
+  let size = list.length - 1;
+  let i = 0;
+  while (i < list.length) {
+    reverse[i] = list[size];
+    i++;
+    size--;
+  }
+  return (reverse);
 };
