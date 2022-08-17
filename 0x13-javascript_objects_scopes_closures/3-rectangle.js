@@ -22,9 +22,10 @@ class Rectangle {
     let i = 1;
     let j = 1;
     let resultado = '';
+    let c = 'X';
     while (i <= this.height) {
       while (j <= this.width) {
-        resultado += 'X';
+        resultado += c;
         j++;
       }
       if (i === this.height) {
