@@ -5,5 +5,5 @@ Prototype: exports.esrever = function (list)
 You are not allow to use the built-in method reverse
 */
 exports.esrever = function (list) {
-  return (list.reverse((cElm) => cElm === value));
+  return (list.reverse((cElm) => cElm));
 };
