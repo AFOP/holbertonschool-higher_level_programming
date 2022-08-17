@@ -12,7 +12,10 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (!c || c != 'C') {
+    if (!c) {
+      c = 'X';
+    }
+    if (c != 'C') {
       c = 'X';
     }
     this.print(c);
