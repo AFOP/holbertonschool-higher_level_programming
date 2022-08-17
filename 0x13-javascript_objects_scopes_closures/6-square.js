@@ -15,9 +15,6 @@ class Square extends Rectangle {
     if (!c) {
       c = 'X';
     }
-    if (c != 'C') {
-      c = 'X';
-    }
     this.print(c);
   }
 }
