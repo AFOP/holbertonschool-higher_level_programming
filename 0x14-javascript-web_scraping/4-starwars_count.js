@@ -9,12 +9,11 @@ const url = process.argv[2];
 const axios = require('axios').default;
 axios.get(url)
   .then((response) => {
-    const films = response.data['results'];
+    const films = response.data.results;
     let cont = 0;
     for (const film of films) {
       for (const character of film.characters) {
-        if (character.includes("/18"))
-        {
+        if (character.includes('/18')) {
           cont++;
         }
       }
