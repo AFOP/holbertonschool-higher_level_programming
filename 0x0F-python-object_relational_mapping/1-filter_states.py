@@ -23,7 +23,9 @@ if __name__ == '__main__':
         database=sys.argv[3]
     )
     cursor = conn.cursor()
-    sql = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
+    sql = ("""SELECT * FROM states WHERE name
+    LIKE BINARY 'N%'
+    ORDER BY states.id ASC""")
     cursor.execute(sql)
     query_rows = cursor.fetchall()
     for row in query_rows:
