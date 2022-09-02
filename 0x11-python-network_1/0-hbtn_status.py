@@ -7,13 +7,15 @@ The body of the response must be displayed like the following
 example (tabulation before -)
 You must use a with statement
 """
-import urllib.request
+if __name__ == "__main__":
 
-req = urllib.request.Request('https://intranet.hbtn.io/status')
-with urllib.request.urlopen(req) as response:
-    status = response.read()
-    print("Body response:\n\
-        - type: {}\n\
-        - content: {}\n\
-        - utf8 content: {}"
-          .format(type(status), status, status.decode("utf-8")))
+  import urllib.request
+
+  req = urllib.request.Request('https://intranet.hbtn.io/status')
+  with urllib.request.urlopen(req) as response:
+      status = response.read()
+      print("Body response:\n\
+          - type: {}\n\
+          - content: {}\n\
+          - utf8 content: {}"
+            .format(type(status), status, status.decode("utf-8")))
