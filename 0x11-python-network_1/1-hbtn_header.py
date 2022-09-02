@@ -9,11 +9,15 @@ The value of this variable is different for each request
 You don't need to check arguments passed to the script (number or type)
 You must use a with statement
 """
-import sys
-import urllib.request
+#!/usr/bin/python3
+"""Takes in a URL, sends a request to the URL and displays the value of the
+X-Request-Id variable found in the header of the response"""
 
-req = urllib.request.Request(sys.argv[1])
-with urllib.request.urlopen(req) as response:
-    status = response.read()
-    for obj in status.parse.urlencode():
-      print(obj)
+
+if __name__ == "__main__":
+    import urllib.request
+    import sys
+
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        head = response.headers.get('X-Request-Id')
+        print(head)
