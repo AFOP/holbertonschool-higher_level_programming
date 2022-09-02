@@ -8,7 +8,8 @@ You must use the packages urllib and sys
 You are not allowed to import packages other than urllib and sys
 You don't need to check arguments passed to the script (number or type)
 You must use the with statement
-Please test your script in the sandbox provided, using the web server running on port 5000
+Please test your script in the sandbox provided,
+using the web server running on port 5000
 """
 
 if __name__ == "__main__":
